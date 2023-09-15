@@ -2,9 +2,15 @@ import React from "react";
 import { BiSearchAlt } from "react-icons/bi";
 
 const Searchbar = ({ searchVal, SetSearchVal }) => {
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  // };
   return (
     <div className="flex mt-5 ">
-      <form className=" w-3/4 flex items-end">
+      <form
+        className=" w-3/4 flex items-end"
+        onSubmit={(e) => e.preventDefault()}
+      >
         <BiSearchAlt className="text-2xl" />
         <input
           type="text"
